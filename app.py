@@ -1,6 +1,7 @@
 from flask import render_template, Flask, request
 import googlemaps as gmaps
 import pandas as pd
+import numpy as np
 import os
 
 # Localizing config variable
