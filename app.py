@@ -3,7 +3,7 @@ import googlemaps as gmaps
 import pandas as pd
 import os
 # Localizing config variable
-gmAPI = os.environ.get('gmapsAPI') 
+gmAPI = os.environ['gmapsAPI'] 
 
 
 # Initialize app
