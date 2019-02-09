@@ -2,6 +2,9 @@ from flask import render_template, Flask, request
 import googlemaps as gmaps
 import pandas as pd
 import os
+# Localizing config variable
+gmAPI = os.environ.get('gmapsAPI') 
+
 
 # Initialize app
 app = Flask(__name__, static_url_path='/static')
@@ -26,7 +29,7 @@ def results():
 
 
 def FoodSpinner(address, style=None, price = 2, rating = 4, distance=1000, choices=1, nowOpen=True):
-    gmapi = gmaps.Client(key=os.environ.get('gmapsAPI'))
+    gmapi = gmaps.Client(key=gmAPI)
     addy = gmapi.geocode(address)
     latlon = addy[0]['geometry']['location']
     srch = gmapi.places_nearby(location=latlon, radius=distance, type='restaurant', keyword=style)
