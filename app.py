@@ -25,7 +25,7 @@ def results():
 
 
 def FoodSpinner(address, style=None, price = 2, rating = 4, distance=1000, choices=1, nowOpen=True):
-    gmapi = gmaps.Client(key='AIzaSyC85HHHj3JTeehfiMAYazam2F5OZjwYTYc')
+    gmapi = gmaps.Client(key=os.environ.get('gmapsAPI'))
     addy = gmapi.geocode(address)
     latlon = addy[0]['geometry']['location']
     srch = gmapi.places_nearby(location=latlon, radius=distance, type='restaurant', keyword=style)

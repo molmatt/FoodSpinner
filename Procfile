@@ -1,1 +1,1 @@
-web: gunicorn app:GetFood
+web: gunicorn app:app
