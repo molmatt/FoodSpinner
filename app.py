@@ -2,9 +2,9 @@ from flask import render_template, Flask, request
 import googlemaps as gmaps
 import pandas as pd
 import os
-# Localizing config variable
-gmAPI = os.environ['gmapsAPI'] 
 
+# Localizing config variable
+gmAPI = os.environ.get('gmapsAPI')
 
 # Initialize app
 app = Flask(__name__, static_url_path='/static')
