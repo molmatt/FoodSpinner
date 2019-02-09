@@ -1,0 +1,61 @@
+<style>
+ .main {
+ background-color: rgba(255, 255, 255, 0.5);
+ margin-top: 100px;
+ padding-bottom: 50px;
+ }
+ .main h1 {
+ font-size: 3.5em;
+ font-family: Arial;
+ color: #2E3759;
+ }
+ .main h2 {
+ font-size: 2em;
+ font-family: Arial;
+ color: #2E3759;
+ }
+ .main h3 {
+ font-size: 2em;
+ font-family: Arial;
+ color: #2E3759;
+ }
+ .main p {
+ font-size:1em;
+ font-family: Arial;
+ color: #2E3759;
+ }
+</style>
+
+<head>
+<title> Food Spinner </title>
+</head>
+
+<body>
+  <div class='main'>
+    <div style='text-align:center'>
+
+      <div><h1>Food Spinner</h1></div>
+
+      <div><p>Love food? Hate making decisions? Great!<br>
+              Specify what you want and leave the rest to chance.</p></div><br><br>
+
+      <form action='/results', method = 'POST'>
+        Address to Look From<br>
+        <input type='text' name='address'><br><br>
+        Meters You are Willing to Travel<br>
+        <input type='text' name='distance' value=1000><br><br>
+        Style of Cuisine Preferred<br>
+        <input type='text' name='style'><br><br>
+        Select the Maximum Price <br>
+        <input type='radio' name='price' value=1> $
+        <input type='radio' name='price' value=2> $$
+        <input type='radio' name='price' value=3> $$$
+        <input type='radio' name='price' value=4> $$$$ <br><br>
+        Minimum Rating<br>
+        <input type='text' name='rating' value=4> <br><br>
+        How Many Options Do You Want?<br>
+        <input type='text' name='choices' value=1> <br><br><br><br>
+        <input type='submit' value='Decisions are Hard'>
+      </form>
+  </div>
+</body>
